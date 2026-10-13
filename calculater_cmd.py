@@ -187,33 +187,33 @@ def s1(f):#首1多项式
 
 print(f'多项式计算器命令行版v1.0by masteam66，\n,使用说明：依次输入多项式系数如x^2-2则输入“1,0,-2”')
 while True:
-    mode=input(f'请选择模式，计算带余除法f(x)/g(x)请输入1，\n导数f‘（x）输入2，\n[f(x)]^n输入3，\n首1最大公因式(f,g)输入4,\n乘法f(x)*g(x)输入5，\nk-1重因式(f(x),f’(x))输入6')
+    mode=input(f'请选择模式，计算带余除法f(x)/g(x)请输入1，\n导数f‘（x）输入2，\n[f(x)]^n输入3，\n首1最大公因式(f,g)输入4,\n乘法f(x)*g(x)输入5，\nk-1重因式(f(x),f’(x))输入6\n')
     if mode =='1':
-        f=input_list(input('请输入f(x):例如x^2-2则输入“1,0,-2”'))
-        g=input_list(input('请输入g(x):例如x^2-2则输入“1,0,-2”'))
+        f=input_list(input('请输入f(x):例如x^2-2则输入“1,0,-2”\n'))
+        g=input_list(input('请输入g(x):例如x^2-2则输入“1,0,-2”\n'))
         dycf_proof(f,g)
         time.sleep(1)
     elif mode =='2':
-        f=input_list(input('请输入f(x):例如x^2-2则输入“1,0,-2”'))
+        f=input_list(input('请输入f(x):例如x^2-2则输入“1,0,-2”\n'))
         print('f(x)='+dxs_preview(f)+','+'f’(x)='+dxs_preview(D(f))+f'\n')
         time.sleep(1)
     elif mode =='3':
-        f=input_list(input('请输入f(x):例如x^2-2则输入“1,0,-2”'))
+        f=input_list(input('请输入f(x):例如x^2-2则输入“1,0,-2”\n'))
         n=int(input('输入指数n'))
         print('('+dxs_preview(f)+')^'+str(n)+'='+dxs_preview(m(f,n))+f'\n')
         time.sleep(1)
     elif mode =='4':
-        f=input_list(input('请输入f(x):例如x^2-2则输入“1,0,-2”'))
-        g=input_list(input('请输入g(x):例如x^2-2则输入“1,0,-2”'))
+        f=input_list(input('请输入f(x):例如x^2-2则输入“1,0,-2”\n'))
+        g=input_list(input('请输入g(x):例如x^2-2则输入“1,0,-2”\n'))
         print('f(x)='+dxs_preview(f)+'与g(x)='+dxs_preview(g)+'的首1最大公因式为'+dxs_preview(s1(zdgys(f,g)))+f'\n')
         time.sleep(1)
     elif mode =='5':
-        f=input_list(input('请输入f(x):例如x^2-2则输入“1,0,-2”'))
-        g=input_list(input('请输入g(x):例如x^2-2则输入“1,0,-2”'))
+        f=input_list(input('请输入f(x):例如x^2-2则输入“1,0,-2”\n'))
+        g=input_list(input('请输入g(x):例如x^2-2则输入“1,0,-2”\n'))
         print('f(x)='+dxs_preview(f)+'与g(x)='+dxs_preview(g)+'的乘积f(x)*g(x)为'+dxs_preview(cf(f,g))+f'\n')
         time.sleep(1)
     elif mode =='6':
-        f=input_list(input('请输入f(x):例如x^2-2则输入“1,0,-2”'))
+        f=input_list(input('请输入f(x):例如x^2-2则输入“1,0,-2”\n'))
         print('f(x)='+dxs_preview(f)+'与f‘(x)='+dxs_preview(D(f))+'的最大公因式(k-1重因式)为'+dxs_preview(s1(zdgys(f,D(f))))+f'\n')
         time.sleep(1)
     else:
